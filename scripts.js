@@ -15,4 +15,9 @@ $(document).ready(function(){
     $(".toggle").on("click", (function(){
         $(this).toggleClass("toggle-active");
     }))
+
+    $("#filter-byCollege").on("click", (function(){
+        $(this).children("i").toggleClass("fa-angle-down fa-angle-up");
+        $(".filter-dropdown").toggleClass("filter-dropdown-active");
+    }))
 })

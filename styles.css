@@ -308,6 +308,33 @@ h3{
     font-size: 24px;
     color: #545454;
     display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+.filters .filter-dropdown{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+    border: 1px solid #AFAFAF;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: stretch;
+    grid-auto-flow: row;
+    gap: 15px;
+    display: none;
+}
+
+.filter-dropdown-active{
+    display: grid !important;
+}
+
+.filters .filter-dropdown div:hover{
+    border: 1px solid #BA1100;
+    cursor: pointer;
 }
 
 .allocation-item{
