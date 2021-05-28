@@ -343,9 +343,13 @@ h3{
     padding: 20px;
     border: 1px solid #BA1100;
     border-radius: 10px;
-    margin-top: 25px;
     gap: 20px;
     place-items: start;
+    background-color: #fff;
+}
+
+.allocation-item:not(:first-of-type){
+    margin-top: 25px;
 }
 
 .allocation-item .allocation-image{
