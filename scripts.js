@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $(".amount-item").on("click", function () {
-    $(".amount-item").removeClass("amount-item-active");
+    $(this).parent().children().removeClass("amount-item-active");
     $(this).addClass("amount-item-active");
     $(".how-much").removeClass("how-much-active");
     if ($(this).attr("id") == "custom-amount") {
