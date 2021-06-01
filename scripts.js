@@ -23,7 +23,7 @@ $(document).ready(function(){
 
     var called = 0;
 
-    $('.overflow-scroll').scroll(function() {
+    /* $('.overflow-scroll').scroll(function() {
                 setTimeout(() => {
                     if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
                         called++;
@@ -33,5 +33,17 @@ $(document).ready(function(){
                     }
                 }, 2000);
             }
-    );
+    ); */
+
+
+    $('.overflow-scroll').on('scroll', _.debounce(lazyLoad, 1000));
+
+    function lazyLoad(){
+        if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+            called++;
+            console.log("Called "+called+" times");
+            $(".loadingcontent").remove();
+            $('.overflow-scroll').append('<div class="allocation-item"><div class="allocation-image" style="background-image: url(img/wrestling.png);"></div><div class="allocation-text"><div><strong>Wrestling Fund</strong><p>The wrestling team needs funds to give scholarships to hardworking athletes who need help. These scholarships will be used to offset tuition and food costs. They also are looking to upgrade their mat which is 5 years old.</p></div><div class="gift-btn">Gift: $250</div></div></div><div class="allocation-item"><div class="allocation-image"style="background-image: url(img/jones.png)"></div><div class="allocation-text"><div><strong>Professor Jones’s Scholarship</strong><p>This scholarship will honor the late Professor Jones’s legacy. The scholarship will go to first generation business administration students who would not be able to attend SUNY without it.</p></div><div class="gift-btn">Gift: $250</div></div></div><div class="allocation-item"><div class="allocation-image"style="background-image: url(img/hockey.png)"></div><div class="allocation-text"><div><strong>Club Sports - Field Hockey</strong><p><span style="color:red">COPY NEEDS TO BE UPDATED </span>This scholarship will honor the late Professor Jones’s legacy. The scholarship will go to first generation business administration students who would not be able to attend SUNY without it.</p></div><div class="gift-btn">Gift: $250</div></div></div><div class="loadingcontent"><div class="spinner"></div></div>');
+        }
+    }
 })
