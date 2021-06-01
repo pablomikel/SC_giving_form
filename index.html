@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/337b4e4981.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 </head>
 <body>
     <div class="notif-bar">
@@ -124,15 +125,18 @@
                 <i class="fas fa-search"></i>
             </div>
         </div>
-        <div    style="
-                    height: 80vh;
-                    overflow: scroll;
-                    background: rgba(0,0,0,0.08);
-                    padding: 20px 20px;
-                    border-radius: 10px;
-                    margin-top: 25px;
-                    border: 1px solid #AFAFAF;
-                ">
+        <div    
+            style="
+                height: 80vh;
+                overflow: scroll;
+                background: rgba(0,0,0,0.08);
+                padding: 20px 20px;
+                border-radius: 10px;
+                margin-top: 25px;
+                border: 1px solid #AFAFAF;
+            "
+            class="overflow-scroll"
+        >
             <div class="allocation-item">
                 <div 
                     class="allocation-image"
@@ -171,6 +175,10 @@
                         <p><span style="color:red">COPY NEEDS TO BE UPDATED </span>This scholarship will honor the late Professor Jones’s legacy. The scholarship will go to first generation business administration students who would not be able to attend SUNY without it.</p>
                     </div>
                     <div class="gift-btn">Gift: $250</div>
+                </div>
+            </div>
+            <div class="loadingcontent">
+                <div class="spinner">
                 </div>
             </div>
         </div>
